@@ -9,19 +9,19 @@ const CanvasModel = () => {
   return (
     <Canvas
       shadows
-      camera={{ position: [0, 0, 0], fov: 25 }}
+      camera={{ position: [0, 0, 0], fov: 30 }} //fov effects zoom / product size
       gl={{ preserveDrawingBuffer: true }}
       className="w-full max-w-full h-full transition-all ease-in"
     >
       <ambientLight intensity={0.5} />
       <Environment preset="city" />
 
-      {/* <CameraRig>
-        <Backdrop /> */}
+      <CameraRig>
+        <Backdrop />
         <Center>
           <Shirt />
         </Center>
-      {/* </CameraRig> */}
+      </CameraRig>
     </Canvas>
   )
 }
